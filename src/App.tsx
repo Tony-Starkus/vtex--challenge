@@ -4,20 +4,10 @@ import './App.css';
 
 import { Card, CardContent, CardHeader } from './styles';
 import ProductItem from './components/ProductItem';
+import listOne from './mock/products-list-one.json';
 
 function App() {
-  const [productsList, setProductsList] = useState([
-    {
-      id: 1,
-      name: 'Trufa de morango',
-      price: 1.23,
-    },
-    {
-      id: 2,
-      name: 'Trufa de morango',
-      price: 1.23,
-    },
-  ]);
+  const [productsData, setProductsData] = useState(listOne);
 
   return (
     <div className="content">
@@ -26,8 +16,8 @@ function App() {
           <h3>Meu carrinho</h3>
         </CardHeader>
         <CardContent>
-          {productsList.map((product) => (
-            <ProductItem />
+          {productsData.items.map((product) => (
+            <ProductItem item={product} />
           ))}
         </CardContent>
       </Card>
