@@ -13,8 +13,22 @@ export const ProductImageContainer = styled.div`
 
 export const ProductInfo = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 `;
 
-export const ProductName = styled.label`
+export const ProductName = styled.span`
   font-weight: 700;
+  padding-top: 10px;
+  padding-bottom: 4px;
+`;
+
+export const ProductPrice = styled.span`
+  font-size: 13px;
+  font-weight: 500;
+  color: #707070ab;
+`;
+
+export const ProductSellingPrice = styled.span`
+  font-weight: 600;
 `;

@@ -4,8 +4,15 @@ html,
 body,
 #root {
   min-height: 100vh;
+  background-color: #d1d8e5;
   margin: 0;
   font-family: 'Poppins';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

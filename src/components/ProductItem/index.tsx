@@ -1,14 +1,28 @@
 import React from 'react';
-import { Container, ProductImageContainer, ProductInfo, ProductName } from './styles';
+import {
+  Container,
+  ProductImageContainer,
+  ProductInfo,
+  ProductName,
+  ProductPrice,
+  ProductSellingPrice,
+} from './styles';
 
 interface ProductItemProps {
   item: {
     name: string;
     imageUrl: string;
+    price: number;
+    sellingPrice: number;
   };
 }
 
 const ProductItem: React.FC<ProductItemProps> = ({ item }) => {
+  const formatedPrice = new Intl.NumberFormat('pt-br', { style: 'currency', currency: 'BRL' }).format(item.price / 100);
+  const formatedSellingPrice = new Intl.NumberFormat('pt-br', { style: 'currency', currency: 'BRL' }).format(
+    item.sellingPrice / 100
+  );
+
   return (
     <Container>
       <ProductImageContainer>
@@ -16,6 +30,8 @@ const ProductItem: React.FC<ProductItemProps> = ({ item }) => {
       </ProductImageContainer>
       <ProductInfo>
         <ProductName>{item.name}</ProductName>
+        <ProductPrice>{formatedPrice}</ProductPrice>
+        <ProductSellingPrice>{formatedSellingPrice}</ProductSellingPrice>
       </ProductInfo>
     </Container>
   );

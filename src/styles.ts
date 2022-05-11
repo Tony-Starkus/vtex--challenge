@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Card = styled.div`
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
   max-width: 600px;
 `;
 
@@ -15,5 +15,10 @@ export const CardContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 16px;
+  padding: 26px;
+`;
+
+export const CardFooter = styled.div`
+  border-top: 1px solid #c4c4c4;
+  padding: 26px;
 `;
