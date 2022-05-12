@@ -22,3 +22,8 @@ export const CardFooter = styled.div`
   border-top: 1px solid #c4c4c4;
   padding: 26px;
 `;
+
+export const Tooltip = styled.span`
+  background-color: green;
+  border-radius: 25px;
+`;
