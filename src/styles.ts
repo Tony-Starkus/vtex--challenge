@@ -25,6 +25,7 @@ export const CardFooter = styled.div`
 `;
 
 export const Chip = styled.span`
+  padding: 8px 16px;
   background-color: #c7ffa6;
   border-radius: 25px;
   color: #217b0a;

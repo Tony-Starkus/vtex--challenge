@@ -49,16 +49,19 @@ function App() {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
+                alignItems: 'center',
                 fontWeight: 700,
                 fontSize: '1.17em',
                 gap: '16px',
               }}
             >
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
                 <span>Total</span>
                 <span>{totalPrice}</span>
               </div>
-              {productsData.totalizers[0].value / 100 > 10 && <Chip>Parabéns, sua compra tem frete gratis !</Chip>}
+              {productsData.totalizers[0].value / 100 > 10 && (
+                <Chip style={{ width: 'fit-content' }}>Parabéns, sua compra tem frete gratis !</Chip>
+              )}
             </div>
           </CardFooter>
         )}
